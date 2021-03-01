@@ -1,8 +1,8 @@
 torch==1.5.0
 torchvision==0.6.0
-mxnet-cu101==1.7.0
+mxnet==1.6.0
 gluoncv==0.7.0
-Keras==2.3.1
+Keras==2.4.3
 segmentation-models==1.0.1
 progressbar2==3.38.0
 tensorflow-probability==0.11.0
