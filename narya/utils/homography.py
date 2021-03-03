@@ -217,7 +217,10 @@ def warp_image_cv(img, H, out_shape=None):
     if out_shape is None:
         out_shape = img.shape[-3:-1] if len(img.shape) == 4 else img.shape[:-1]
     if len(img.shape) == 3:
-        return cv2.warpPerspective(img, H, dsize=out_shape)
+        try:
+          return cv2.warpPerspective(img, H, dsize=out_shape)
+        except:
+          return img
     else:
         if img.shape[0] != H.shape[0]:
             raise ValueError(
